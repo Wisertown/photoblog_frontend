@@ -9,19 +9,47 @@
 
 <script type="text/javascript" src="oriDomi-master/oridomi.min.js"></script>
 <link rel="stylesheet" href="css/style.css">
+
 <script>
+$( document ).ready(function(){
 
-
-
-$( document ).ready(function() {
+//$(".main2").hide();
 
 var $blurfocus = $('<div id="blurfocus"></div>');
 var $image = $("<img>");
-$blurfocus.append($image);
-
+$blurfocus.append($image); 
 $("body").append($blurfocus);
 
 $("#hikeshow a").click(function(event){
+	console.log("MADE IT");
+	event.preventDefault();
+
+	var imageLocation = $(this).attr("href");
+
+	$image.attr("src", imageLocation);
+	$blurfocus.show();
+});
+
+$blurfocus.click(function(){
+  //Hide the overlay
+  $blurfocus.hide();
+});
+
+
+});
+</script>
+<script>
+$( document ).ready(function(){
+
+//$(".main2").hide();
+
+var $blurfocus = $('<div id="blurfocus"></div>');
+var $image = $("<img>");
+$blurfocus.append($image); 
+$("body").append($blurfocus);
+
+$("#hikeshow2 a").click(function(event){
+		console.log("gothere");
 	event.preventDefault();
 
 	var imageLocation = $(this).attr("href");
@@ -29,12 +57,16 @@ $("#hikeshow a").click(function(event){
 	$image.attr("src", imageLocation);
 	$blurfocus.show();
 
-})
+});
+
+
 $blurfocus.click(function(){
   //Hide the overlay
   $blurfocus.hide();
 });
-})
+
+
+});
 </script>
 </head>
 <body>
@@ -48,20 +80,40 @@ $blurfocus.click(function(){
 			<br>
 			<p>Click on a photo below to view its full majestic glory.</p>
 		</div>
+		<div class="button_hold">
+			<button class="rachel">Rachel Lake WA</button>
+			<button class="tableR">Table Rock VA</button>
+		</div>
 		<div class="main">
 			<ul id="hikeshow">
-				<li><a href="/images/rlake/imag0014.jpg"><img class="imgv" src="/images/rlake/imag0014.jpg"  alt=""></a></li>
-				<li><a href="/images/rlake/imag0015.jpg"><img class="imgv" src="/images/rlake/imag0015.jpg"  width="150" alt=""></a></li>
-				<li><a href="/images/rlake/imag0016.jpg"><img class="imgv" src="/images/rlake/imag0016.jpg" width="150"  alt=""></a></li>
-				<li><a href="/images/rlake/imag0057.jpg"><img class="imgv" src="/images/rlake/imag0057.jpg" width="150"  alt=""></a></li>
-				<li><a href="/images/rlake/imag0018.jpg"><img class="imgv" src="/images/rlake/imag0018.jpg" width="150"  alt=""></a></li>
-				<li><a href="/images/rlake/imag0036.jpg"><img class="imgv" src="/images/rlake/imag0036.jpg" width="150"  alt=""></a></li>
-				<li><a href="/images/rlake/imag0099.jpg"><img class="imgv" src="/images/rlake/imag0099.jpg" width="150"  alt=""></a></li>
-				<li><a href="/images/rlake/imag0021.jpg"><img class="imgv" src="/images/rlake/imag0021.jpg" width="150" alt=""></a></li>
-				<li><a href="/images/rlake/imag0060.jpg"><img class="imgv" src="/images/rlake/imag0060.jpg" width="150"  alt=""></a></li>
-				<li><a href="/images/rlake/imag0061.jpg"><img class="imgv" src="/images/rlake/imag0061.jpg" width="150"  alt=""></a></li>
-				<li><a href="/images/rlake/imag0063.jpg"><img class="imgv" src="/images/rlake/imag0063.jpg" width="150"  alt=""></a></li>
+				<li><a href="/images/rlake/imag0014.jpg"><img class="imgv" src="/images/thumbs/thumb0014.jpg"  alt=""></a></li>
+				<li><a href="/images/rlake/imag0015.jpg"><img class="imgv" src="/images/thumbs/thumb0015.jpg"  width="150" alt=""></a></li>
+				<li><a href="/images/rlake/imag0016.jpg"><img class="imgv" src="/images/thumbs/thumb0016.jpg" width="150"  alt=""></a></li>
+				<li><a href="/images/rlake/imag0057.jpg"><img class="imgv" src="/images/thumbs/thumb0057.jpg" width="150"  alt=""></a></li>
+				<li><a href="/images/rlake/imag0018.jpg"><img class="imgv" src="/images/thumbs/thumb0018.jpg" width="150"  alt=""></a></li>
+				<li><a href="/images/rlake/imag0036.jpg"><img class="imgv" src="/images/thumbs/thumb0036.jpg" width="150"  alt=""></a></li>
+				<li><a href="/images/rlake/imag0099.jpg"><img class="imgv" src="/images/thumbs/thumb0099.jpg" width="150"  alt=""></a></li>
+				<li><a href="/images/rlake/imag0021.jpg"><img class="imgv" src="/images/thumbs/thumb0021.jpg" width="150" alt=""></a></li>
+				<li><a href="/images/rlake/imag0060.jpg"><img class="imgv" src="/images/thumbs/thumb0060.jpg" width="150"  alt=""></a></li>
+				<li><a href="/images/rlake/imag0061.jpg"><img class="imgv" src="/images/thumbs/thumb0061.jpg" width="150"  alt=""></a></li>
+				<li><a href="/images/rlake/imag0063.jpg"><img class="imgv" src="/images/thumbs/thumb0063.jpg" width="150"  alt=""></a></li>
 				<li><a href="/images/rlake/imag0067.jpg"><img class="imgv" src="/images/thumbs/thumb0067.jpg" width="150" alt=""></a></li>
+			</ul>
+		</div>
+		<div class="main2">
+			<ul class="hikeshow2">
+				<li><a href="/images/va1/IMAG0099.jpg"><img class="imgv" src="/images/rlake/imag0014.jpg"  alt=""></a></li>
+				<li><a href="/images/va1/IMAG0100.jpg"><img class="imgv" src="/images/rlake/imag0015.jpg"  width="150" alt=""></a></li>
+				<li><a href="/images/va1/IMAG0101.jpg"><img class="imgv" src="/images/rlake/imag0016.jpg" width="150"  alt=""></a></li>
+				<li><a href="/images/va1/IMAG0102.jpg"><img class="imgv" src="/images/rlake/imag0057.jpg" width="150"  alt=""></a></li>
+				<li><a href="/images/va1/IMAG0104.jpg"><img class="imgv" src="/images/rlake/imag0018.jpg" width="150"  alt=""></a></li>
+				<li><a href="/images/va1/IMAG0105.jpg"><img class="imgv" src="/images/rlake/imag0036.jpg" width="150"  alt=""></a></li>
+				<li><a href="/images/va1/IMAG0113.jpg"><img class="imgv" src="/images/rlake/imag0099.jpg" width="150"  alt=""></a></li>
+				<li><a href="/images/va1/IMAG0118.jpg"><img class="imgv" src="/images/rlake/imag0021.jpg" width="150" alt=""></a></li>
+				<li><a href="/images/va1/IMAG0119.jpg"><img class="imgv" src="/images/rlake/imag0060.jpg" width="150"  alt=""></a></li>
+				<li><a href="/images/va1/IMAG0120.jpg"><img class="imgv" src="/images/rlake/imag0061.jpg" width="150"  alt=""></a></li>
+				<li><a href="/images/va1/IMAG0121.jpg"><img class="imgv" src="/images/rlake/imag0063.jpg" width="150"  alt=""></a></li>
+				<li><a href="/images/va1/IMAG0122.jpg"><img class="imgv" src="/images/thumbs/thumb0067.jpg" width="150" alt=""></a></li>
 			</ul>
 		</div>
 	</div>

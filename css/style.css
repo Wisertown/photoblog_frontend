@@ -16,12 +16,17 @@ html {
 #hikeshow{
 	text-align: center;
 }
+#hikeshow2{
+	text-align: center;
+}
 .heading {
 	text-align: center;
 	border-bottom: 3px solid #DE1B1B;
 
 }
-
+.button_hold{
+	text-align: center;
+}
 ul li{
 
 
@@ -60,9 +65,19 @@ ul {
 	background-color: #F6F6F6;
 	border: 1px solid #DE1B1B;
 }
+.main2{
+	width:auto !important;
+	margin-bottom: 3%;
+	display: inline-block;
+	margin-left: 12%;
+	margin-right: 12%;
+	background-color: #F6F6F6;
+	border: 1px solid #DE1B1B;
+}
+
 .imgv{
 	display: inline-block;
-
+	border-radius: 5px;
 	margin:15px;
 	width: 200px;
 	height: 200px;
@@ -104,6 +119,7 @@ width:70%;
 height: 80%;
 max-height:1500px;
 padding-bottom:inherit;
+border-radius: 5px;
 }
 
 
