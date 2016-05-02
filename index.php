@@ -13,7 +13,7 @@
 <script>
 $( document ).ready(function(){
 
-//$(".main2").hide();
+$(".main").hide();
 
 var $blurfocus = $('<div id="blurfocus"></div>');
 var $image = $("<img>");
@@ -30,26 +30,11 @@ $("#hikeshow a").click(function(event){
 	$blurfocus.show();
 });
 
-$blurfocus.click(function(){
-  //Hide the overlay
-  $blurfocus.hide();
-});
-
-
-});
-</script>
-<script>
-$( document ).ready(function(){
-
 //$(".main2").hide();
 
-var $blurfocus = $('<div id="blurfocus"></div>');
-var $image = $("<img>");
-$blurfocus.append($image); 
-$("body").append($blurfocus);
 
-$("#hikeshow2 a").click(function(event){
-		console.log("gothere");
+$("#hikeshowtwo a").click(function(event){
+
 	event.preventDefault();
 
 	var imageLocation = $(this).attr("href");
@@ -65,6 +50,14 @@ $blurfocus.click(function(){
   $blurfocus.hide();
 });
 
+$(".rachel").click(function(){
+	$(".main2").hide();
+	$(".main").show();
+})
+$(".tableR").click(function(){
+	$(".main").hide();
+	$(".main2").show();
+})
 
 });
 </script>
@@ -86,6 +79,7 @@ $blurfocus.click(function(){
 		</div>
 		<div class="main">
 			<ul id="hikeshow">
+				<h4>Rachel Lake Washington</h4>
 				<li><a href="/images/rlake/imag0014.jpg"><img class="imgv" src="/images/thumbs/thumb0014.jpg"  alt=""></a></li>
 				<li><a href="/images/rlake/imag0015.jpg"><img class="imgv" src="/images/thumbs/thumb0015.jpg"  width="150" alt=""></a></li>
 				<li><a href="/images/rlake/imag0016.jpg"><img class="imgv" src="/images/thumbs/thumb0016.jpg" width="150"  alt=""></a></li>
@@ -101,19 +95,20 @@ $blurfocus.click(function(){
 			</ul>
 		</div>
 		<div class="main2">
-			<ul class="hikeshow2">
-				<li><a href="/images/va1/IMAG0099.jpg"><img class="imgv" src="/images/rlake/imag0014.jpg"  alt=""></a></li>
-				<li><a href="/images/va1/IMAG0100.jpg"><img class="imgv" src="/images/rlake/imag0015.jpg"  width="150" alt=""></a></li>
-				<li><a href="/images/va1/IMAG0101.jpg"><img class="imgv" src="/images/rlake/imag0016.jpg" width="150"  alt=""></a></li>
-				<li><a href="/images/va1/IMAG0102.jpg"><img class="imgv" src="/images/rlake/imag0057.jpg" width="150"  alt=""></a></li>
-				<li><a href="/images/va1/IMAG0104.jpg"><img class="imgv" src="/images/rlake/imag0018.jpg" width="150"  alt=""></a></li>
-				<li><a href="/images/va1/IMAG0105.jpg"><img class="imgv" src="/images/rlake/imag0036.jpg" width="150"  alt=""></a></li>
-				<li><a href="/images/va1/IMAG0113.jpg"><img class="imgv" src="/images/rlake/imag0099.jpg" width="150"  alt=""></a></li>
-				<li><a href="/images/va1/IMAG0118.jpg"><img class="imgv" src="/images/rlake/imag0021.jpg" width="150" alt=""></a></li>
-				<li><a href="/images/va1/IMAG0119.jpg"><img class="imgv" src="/images/rlake/imag0060.jpg" width="150"  alt=""></a></li>
-				<li><a href="/images/va1/IMAG0120.jpg"><img class="imgv" src="/images/rlake/imag0061.jpg" width="150"  alt=""></a></li>
-				<li><a href="/images/va1/IMAG0121.jpg"><img class="imgv" src="/images/rlake/imag0063.jpg" width="150"  alt=""></a></li>
-				<li><a href="/images/va1/IMAG0122.jpg"><img class="imgv" src="/images/thumbs/thumb0067.jpg" width="150" alt=""></a></li>
+			<ul id="hikeshowtwo">
+				<h4>Table Rock Virginia</h4>
+				<li><a href="/images/va1/IMAG0099.jpg"><img class="imgv" src="/images/va1/IMAG0099.jpg"  alt=""></a></li>
+				<li><a href="/images/va1/IMAG0100.jpg"><img class="imgv" src="/images/va1/IMAG0100.jpg"  width="150" alt=""></a></li>
+				<li><a href="/images/va1/IMAG0101.jpg"><img class="imgv" src="/images/va1/IMAG0101.jpg" width="150"  alt=""></a></li>
+				<li><a href="/images/va1/IMAG0102.jpg"><img class="imgv" src="/images/va1/IMAG0102.jpg" width="150"  alt=""></a></li>
+				<li><a href="/images/va1/IMAG0104.jpg"><img class="imgv" src="/images/va1/IMAG0104.jpg" width="150"  alt=""></a></li>
+				<li><a href="/images/va1/IMAG0105.jpg"><img class="imgv" src="/images/va1/IMAG0105.jpg" width="150"  alt=""></a></li>
+				<li><a href="/images/va1/IMAG0113.jpg"><img class="imgv" src="/images/va1/IMAG0113.jpg" width="150"  alt=""></a></li>
+				<li><a href="/images/va1/IMAG0118.jpg"><img class="imgv" src="/images/va1/IMAG0118.jpg" width="150" alt=""></a></li>
+				<li><a href="/images/va1/IMAG0119.jpg"><img class="imgv" src="/images/va1/IMAG0119.jpg" width="150"  alt=""></a></li>
+				<li><a href="/images/va1/IMAG0120.jpg"><img class="imgv" src="/images/va1/IMAG0120.jpg" width="150"  alt=""></a></li>
+				<li><a href="/images/va1/IMAG0121.jpg"><img class="imgv" src="/images/va1/IMAG0121.jpg" width="150"  alt=""></a></li>
+				<li><a href="/images/va1/IMAG0122.jpg"><img class="imgv" src="/images/va1/IMAG0122.jpg" width="150" alt=""></a></li>
 			</ul>
 		</div>
 	</div>
