@@ -1,4 +1,4 @@
-@media screen and (min-device-width: 1000px){
+@media screen and (min-device-width: 1000px) and (max-width: 1600px){
 html {
 	background-color: #2B2B2B;
 
@@ -102,15 +102,15 @@ ul {
 	display: inline-block;
 	border-radius: 5px;
 	margin:15px;
-	width: 200px;
-	height: 200px;
+	width: 200px !important;
+	height: 200px !important;
 }
 .imgv1{
 	display: inline-block;
 	background-image: url("/images/imag0058.jpg");
 	margin:15px;
-	width: 200px;
-	height: 200px;
+	width: 200px !important;
+	height: 200px !important;
 }
 .prim {
 	background-color: #DE1B1B;
@@ -223,7 +223,7 @@ border-radius: 5px;
 }
 }
 
-@media screen and (min-device-width:501px) and (max-device-width:999px){
+@media screen and (min-device-width:501px) and (max-device-width:768px){
 .content{
 	margin-left:auto;
 	margin-right:auto;
@@ -237,17 +237,16 @@ html {
 	width:inherit;
 	height:100%;
 	background-color: #2B2B2B;
-}
-body {
-	width:inherit;
-}
+
+	
+
 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;*/
-
 }
+
 * {
 	color: white;
 }
@@ -465,12 +464,12 @@ border-radius: 5px;
 	.content{
 	text-align: center;
 	padding-bottom: 20%;
-	width:100%;
+	width:375px !important;
 	height:100%;
 }
 html {
 	text-align: center;
-	width:90%;
+	width:375px !important;
 	height:auto;
 	background-color: #2B2B2B;
 
@@ -480,6 +479,9 @@ html {
   -o-background-size: cover;
   background-size: cover;*/
 
+}
+body{
+	width:375px;
 }
 * {
 	color: white;
@@ -515,16 +517,19 @@ html {
 	color:black;
 }
 .heading {
+	width:inherit !important;
 	text-align: center;
 	border-bottom: 3px solid #DE1B1B;
 
 }
+.heading h1{
+	width:inherit !important;
+	}
 .button_hold{
 	text-align: center;
 }
 ul li{
-
-
+	
 	display: inline-block;
 	list-style: none;
 
@@ -597,7 +602,7 @@ ul {
 }
 div#blurfocus {
   background:rgba(0,0,0,0.6);
-  width:100%;
+  width:inherit;
   min-height: 1189px;
   position:absolute;
   top:0;
@@ -608,7 +613,7 @@ div#blurfocus {
 
 #blurfocus img {
  margin-top: 20%; 
-width:90%;
+width:inherit;
 height: 80%;
 max-height:1500px;
 padding-bottom:inherit;
@@ -628,7 +633,7 @@ border-radius: 5px;
 
 /* Clip text element */
 .clip-text {
-    font-size: 6em;
+    /*font-size: 6em;*/
     font-weight: bold;
     line-height: 1;
     position: relative;
@@ -661,6 +666,7 @@ border-radius: 5px;
 
 /* Text Background (black zone) */
 .clip-text:after {
+	width:inherit !important;
     position: absolute;
     z-index: -1;
     top: .125em;
@@ -690,5 +696,6 @@ border-radius: 5px;
 
 .clip-text_twelve {
     background-image: url("../images/header2.jpg");
+    width:90% !important;
 }
 }
