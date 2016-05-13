@@ -14,7 +14,7 @@
 <script>
 $( document ).ready(function(){
 
-$(".main2").hide();
+$("#hikeshowtwo").hide();
 
 var $blurfocus = $('<div id="blurfocus"></div>');
 var $image = $("<img>");
@@ -52,12 +52,12 @@ $blurfocus.click(function(){
 });
 
 $(".rachel").click(function(){
-	$(".main2").hide();
-	$(".main").show();
+	$("#hikeshowtwo").hide();
+	$("#hikeshow").fadeIn("slow");
 })
 $(".tableR").click(function(){
-	$(".main").hide();
-	$(".main2").show();
+	$("#hikeshow").hide();
+	$("#hikeshowtwo").fadeIn("slow");
 })
 
 });
@@ -94,8 +94,6 @@ $(".tableR").click(function(){
 				<li><a href="images/rlake/imag0063.jpg"><img class="imgv" src="images/thumbs/thumb0063.jpg" width="150"  alt=""></a></li>
 				<li><a href="images/rlake/imag0067.jpg"><img class="imgv" src="images/thumbs/thumb0067.jpg" width="150" alt=""></a></li>
 			</ul>
-		</div>
-		<div class="main2">
 			<ul id="hikeshowtwo">
 				<h4>Table Rock Virginia</h4>
 				<li><a href="images/va1/IMAG0099.jpg"><img class="imgv" src="images/thumbs/thumb0099A.jpg"  alt=""></a></li>
@@ -112,6 +110,9 @@ $(".tableR").click(function(){
 				<li><a href="images/va1/IMAG0122.jpg"><img class="imgv" src="images/thumbs/thumb0122.jpg" width="150" alt=""></a></li>
 			</ul>
 		</div>
+		
+
+	
 	</div>
 </body>
 </html>
