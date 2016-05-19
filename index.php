@@ -15,10 +15,15 @@
 $( document ).ready(function(){
 
 $("#hikeshowtwo").hide();
+var $blurfocus = $('<div id="blurfocus"><div class="charge"></div></div>');
 
-var $blurfocus = $('<div id="blurfocus"></div>');
 var $image = $("<img>");
+var $index = 0;
+var $galleryLength = $("#hikeshow li").length;
 $blurfocus.append($image); 
+$blurfocus.children("div").append("<button id='btnPrev'> Prev </button>");
+$blurfocus.children("div").append("<button id='btnNext'> Next </button>");
+
 $("body").append($blurfocus);
 
 $("#hikeshow a").click(function(event){
@@ -30,8 +35,14 @@ $("#hikeshow a").click(function(event){
 	$image.attr("src", imageLocation);
 	$blurfocus.show();
 });
+var updateImage = function(imageLocation){
 
-//$(".main2").hide();
+
+  $image.attr("src", imageLocation);
+
+
+}
+
 
 
 $("#hikeshowtwo a").click(function(event){
@@ -40,15 +51,49 @@ $("#hikeshowtwo a").click(function(event){
 
 	var imageLocation = $(this).attr("href");
 
+	$index = $(this).parent().index(); 
 	$image.attr("src", imageLocation);
-	$blurfocus.show();
+	updateImage(imageLocation);
+	$blurfocus.slideDown(imageLocation);
 
 });
+var prevNext = function(prev ){
 
+  if(!prev) { $index++; }
+  else { $index--; }
+
+  //if out of index reset
+  if ($index < 0) { $index = $galleryLength-1;}
+  if ($index > 10) { $index = 0; }
+
+ if($("#hikeshow").is(":visible") == true){
+  	$currHike = "#hikeshow li";
+  } else {
+  	$currHike = "#hikeshowtwo li";
+  };
+  //Grab the element by index and then get the link
+  var newImgSelected = $($currHike).get($index).getElementsByTagName("a");
+
+  //grab link information
+  var imageLocation = $(newImgSelected).attr("href");
+ 
+
+  //Update Overlay
+  updateImage(imageLocation);
+};
 
 $blurfocus.click(function(){
   //Hide the overlay
-  $blurfocus.hide();
+ if(event.target.id == "blurfocus")
+    $(this).slideUp("fast");
+});
+
+$("#btnPrev").click(function(event){
+  prevNext(true);
+});
+
+$("#btnNext").click(function(event){
+  prevNext();
 });
 
 $(".rachel").click(function(){
@@ -62,6 +107,7 @@ $(".tableR").click(function(){
 
 });
 </script>
+
 </head>
 <body>
 
